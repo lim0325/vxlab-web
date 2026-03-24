@@ -8,48 +8,32 @@ export const metadata: Metadata = {
 
 const products = [
   {
-    id: "vxct-studio",
-    name: "VxCT Studio",
+    id: "vxworkspace",
+    name: "VxWorkspace",
     tagline: "올인원 CT 재구성 & 분석 플랫폼",
     description:
-      "VxCT Studio는 CT 데이터 재구성부터 3D 시각화, 결함 분석, 치수 측정까지 모든 워크플로우를 하나의 환경에서 제공합니다.",
+      "VxWorkspace는 CT 데이터 재구성부터 3D 시각화, 치수 측정, 캘리브레이션까지 모든 워크플로우를 하나의 환경에서 제공합니다.",
     features: [
-      "FDK / Iterative / AI 기반 재구성 알고리즘",
+      "FDK / Iterative / AI 기반 재구성 기능",
       "3D 볼륨 렌더링 및 단면 뷰",
-      "자동 결함 탐지 (기공, 크랙, 이물질)",
-      "GD&T 기반 치수 측정",
-      "CAD 비교 분석 (Nominal/Actual)",
-      "리포트 자동 생성",
+      "치수 측정",
+      "팬텀 기반 자동 켈리브레이션",
+      "워크플로우 기반 데이터 관리",
     ],
   },
   {
-    id: "vxct-engine",
-    name: "VxCT Engine",
+    id: "vxreconsdk",
+    name: "VxReconSDK",
     tagline: "고성능 GPU 가속 재구성 엔진",
     description:
-      "VxCT Engine은 CUDA 기반 GPU 가속으로 대용량 CT 데이터를 빠르게 재구성하는 핵심 엔진입니다. SDK를 통해 기존 시스템에 쉽게 통합할 수 있습니다.",
+      "VxReconSDK은 CUDA 기반 GPU 가속으로 대용량 CT 데이터를 빠르게 재구성하는 핵심 엔진입니다. SDK를 통해 기존 시스템에 쉽게 통합할 수 있습니다.",
     features: [
       "CUDA 기반 GPU 가속 (NVIDIA)",
-      "Cone-beam / Fan-beam / Parallel-beam 지원",
+      "Cone-beam / Oblique-CT / Planar-CT 지원",
       "Metal Artifact Reduction (MAR)",
       "Ring Artifact Correction",
-      "C++ / Python SDK 제공",
-      "배치 처리 및 자동화 지원",
-    ],
-  },
-  {
-    id: "vxct-inline",
-    name: "VxCT Inline",
-    tagline: "생산 라인 통합 실시간 검사",
-    description:
-      "VxCT Inline은 생산 라인에 직접 통합되어 실시간으로 CT 검사를 수행하는 인라인 솔루션입니다. 100% 전수 검사를 자동화합니다.",
-    features: [
-      "실시간 CT 재구성 및 검사",
-      "Pass/Fail 자동 판정",
-      "PLC / MES 시스템 연동",
-      "SPC 통계 데이터 수집",
-      "다중 스테이션 지원",
-      "원격 모니터링 대시보드",
+      "C++ SDK 제공",
+      "ROI 기반 재구성 지원",
     ],
   },
 ];

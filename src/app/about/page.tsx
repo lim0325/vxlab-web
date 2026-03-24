@@ -109,51 +109,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Milestones */}
-      <section className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="text-primary font-medium text-sm uppercase tracking-widest mb-2">
-              Journey
-            </p>
-            <h2 className="text-3xl font-bold text-gray-900">VxLab의 여정</h2>
-          </div>
-          <div className="max-w-2xl mx-auto">
-            {milestones.map((m, idx) => (
-              <div key={m.year} className="flex gap-6 mb-8 last:mb-0">
-                <div className="flex flex-col items-center">
-                  <div className="w-4 h-4 rounded-full bg-primary shrink-0" />
-                  {idx < milestones.length - 1 && (
-                    <div className="w-px flex-1 bg-gray-200 mt-2" />
-                  )}
-                </div>
-                <div className="pb-8">
-                  <p className="text-sm font-semibold text-primary">{m.year}</p>
-                  <p className="text-gray-600 mt-1">{m.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="gradient-bg py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-white mb-3">
-            함께 일할 동료를 찾고 있습니다
-          </h2>
-          <p className="text-gray-300 mb-6">
-            CT 재구성, GPU 컴퓨팅, AI에 관심 있는 분들의 연락을 기다립니다.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-8 py-3 bg-accent text-gray-900 font-semibold rounded-lg hover:bg-accent/90 transition-colors"
-          >
-            연락하기
-          </Link>
-        </div>
-      </section>
+    
     </>
   );
 }

@@ -140,22 +140,22 @@ export default function ContactPage() {
                   <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-2">
                     Email
                   </h3>
-                  <p className="text-gray-500">contact@vxlab.io</p>
+                  <p className="text-gray-500">yslim@vxlab.co.kr</p>
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-2">
                     Phone
                   </h3>
-                  <p className="text-gray-500">+82-2-0000-0000</p>
+                  <p className="text-gray-500">+82-10-3211-0353</p>
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-2">
                     Address
                   </h3>
                   <p className="text-gray-500">
-                    서울특별시 강남구
+                    경기도 광명시 서부샛길 778 (철산동)
                     <br />
-                    테헤란로 000
+                    디오스텔가산 1405호
                   </p>
                 </div>
                 <div>

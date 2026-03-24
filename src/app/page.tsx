@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const products = [
   {
-    name: "VxCT Studio",
+    name: "VxWorkspace",
     description:
       "고급 CT 재구성 및 3D 시각화 소프트웨어. 산업용 CT 데이터를 정밀하게 분석하고 시각화합니다.",
     icon: (
@@ -12,22 +12,12 @@ const products = [
     ),
   },
   {
-    name: "VxCT Engine",
+    name: "VxReconSDK",
     description:
       "고성능 CT 재구성 엔진. GPU 가속 기반으로 대용량 CT 데이터를 빠르게 재구성합니다.",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h9a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0015.75 4.5h-9A2.25 2.25 0 004.5 6.75v10.5A2.25 2.25 0 006.75 19.5z" />
-      </svg>
-    ),
-  },
-  {
-    name: "VxCT Inline",
-    description:
-      "인라인 검사 솔루션. 생산 라인에 통합하여 실시간 CT 검사를 자동화합니다.",
-    icon: (
-      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
       </svg>
     ),
   },
@@ -129,7 +119,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {products.map((product) => (
               <div
                 key={product.name}

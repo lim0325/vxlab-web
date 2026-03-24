@@ -1,10 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const footerLinks = {
   Products: [
-    { name: "VxCT Studio", href: "/products#vxct-studio" },
-    { name: "VxCT Engine", href: "/products#vxct-engine" },
-    { name: "VxCT Inline", href: "/products#vxct-inline" },
+    { name: "VxWorkspace", href: "/products#vxworkspace" },
+    { name: "VxReconSDK", href: "/products#vxreconsdk" },
   ],
   Solutions: [
     { name: "Aerospace", href: "/solutions#aerospace" },
@@ -26,9 +26,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-white font-bold text-sm">Vx</span>
-              </div>
+              <Image src="/logo.png" alt="VxLab" width={36} height={36} />
               <span className="text-xl font-bold text-white">
                 Vx<span className="text-accent">Lab</span>
               </span>
