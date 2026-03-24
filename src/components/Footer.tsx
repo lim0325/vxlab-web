@@ -7,9 +7,10 @@ const footerLinks = {
     { name: "VxReconSDK", href: "/products#vxreconsdk" },
   ],
   Solutions: [
-    { name: "Aerospace", href: "/solutions#aerospace" },
-    { name: "Automotive", href: "/solutions#automotive" },
     { name: "Electronics", href: "/solutions#electronics" },
+    { name: "Battery", href: "/solutions#battery" },
+    { name: "Automotive", href: "/solutions#automotive" },
+    { name: "Aerospace", href: "/solutions#aerospace" },
     { name: "Research", href: "/solutions#research" },
   ],
   Company: [

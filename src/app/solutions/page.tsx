@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Solutions | VxLab",
@@ -8,16 +7,29 @@ export const metadata: Metadata = {
 
 const solutions = [
   {
-    id: "aerospace",
-    name: "항공우주",
-    nameEn: "Aerospace",
+    id: "electronics",
+    name: "전자/반도체",
+    nameEn: "Electronics",
     description:
-      "터빈 블레이드, 복합재 구조물, 주조 부품 등 항공우주 분야의 핵심 부품을 비파괴적으로 정밀 검사합니다.",
+      "PCB, BGA, 반도체 패키지 등 미세 구조물에 대한 고해상도 CT 검사를 제공합니다.",
     useCases: [
-      "터빈 블레이드 내부 결함 탐지",
-      "복합재 층간분리(Delamination) 검사",
-      "적층제조(AM) 부품 기공 분석",
-      "AS9100 품질 기준 충족",
+      "BGA 솔더 조인트 검사",
+      "PCB 내부 via/layer 분석",
+      "반도체 패키지 결함 탐지",
+      "마이크로 커넥터 품질 검증",
+    ],
+  },
+  {
+    id: "battery",
+    name: "이차전지",
+    nameEn: "Battery",
+    description:
+      "리튬이온 배터리 셀 및 모듈의 내부 구조를 비파괴적으로 검사하여 안전성과 품질을 확보합니다.",
+    useCases: [
+      "전극 정렬 및 오버행 검사",
+      "내부 단락 원인 분석",
+      "전해액 분포 확인",
+      "용접 품질 검사 (탭, 캔)",
     ],
   },
   {
@@ -34,16 +46,16 @@ const solutions = [
     ],
   },
   {
-    id: "electronics",
-    name: "전자/반도체",
-    nameEn: "Electronics",
+    id: "aerospace",
+    name: "항공우주",
+    nameEn: "Aerospace",
     description:
-      "PCB, BGA, 반도체 패키지 등 미세 구조물에 대한 고해상도 CT 검사를 제공합니다.",
+      "터빈 블레이드, 복합재 구조물, 주조 부품 등 항공우주 분야의 핵심 부품을 비파괴적으로 정밀 검사합니다.",
     useCases: [
-      "BGA 솔더 조인트 검사",
-      "PCB 내부 via/layer 분석",
-      "반도체 패키지 결함 탐지",
-      "마이크로 커넥터 품질 검증",
+      "터빈 블레이드 내부 결함 탐지",
+      "복합재 층간분리(Delamination) 검사",
+      "적층제조(AM) 부품 기공 분석",
+      "AS9100 품질 기준 충족",
     ],
   },
   {
@@ -99,12 +111,6 @@ export default function SolutionsPage() {
                   <p className="text-gray-500 leading-relaxed">
                     {solution.description}
                   </p>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center mt-6 text-primary text-sm font-medium hover:underline"
-                  >
-                    자세한 상담 요청 →
-                  </Link>
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-4">
@@ -134,24 +140,6 @@ export default function SolutionsPage() {
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="gradient-bg py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-white mb-3">
-            귀사의 산업에 맞는 솔루션을 찾고 계신가요?
-          </h2>
-          <p className="text-gray-300 mb-6">
-            VxLab 전문가와 상담하여 맞춤 솔루션을 확인하세요.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-8 py-3 bg-accent text-gray-900 font-semibold rounded-lg hover:bg-accent/90 transition-colors"
-          >
-            상담 문의
-          </Link>
         </div>
       </section>
     </>

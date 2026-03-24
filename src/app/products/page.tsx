@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Products | VxLab",
@@ -11,6 +11,7 @@ const products = [
     id: "vxworkspace",
     name: "VxWorkspace",
     tagline: "올인원 CT 재구성 & 분석 플랫폼",
+    image: "/products-vxworkspace.png",
     description:
       "VxWorkspace는 CT 데이터 재구성부터 3D 시각화, 치수 측정, 캘리브레이션까지 모든 워크플로우를 하나의 환경에서 제공합니다.",
     features: [
@@ -25,6 +26,7 @@ const products = [
     id: "vxreconsdk",
     name: "VxReconSDK",
     tagline: "고성능 GPU 가속 재구성 엔진",
+    image: "/products-vxreconsdk.png",
     description:
       "VxReconSDK은 CUDA 기반 GPU 가속으로 대용량 CT 데이터를 빠르게 재구성하는 핵심 엔진입니다. SDK를 통해 기존 시스템에 쉽게 통합할 수 있습니다.",
     features: [
@@ -32,8 +34,8 @@ const products = [
       "Cone-beam / Oblique-CT / Planar-CT 지원",
       "Metal Artifact Reduction (MAR)",
       "Ring Artifact Correction",
-      "C++ SDK 제공",
       "ROI 기반 재구성 지원",
+      "C++ SDK 제공",
     ],
   },
 ];
@@ -97,57 +99,22 @@ export default function ProductsPage() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center mt-8 px-6 py-3 bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary-dark transition-colors"
-                >
-                  데모 요청
-                </Link>
               </div>
 
-              {/* Visual placeholder */}
+              {/* Product Screenshot */}
               <div className={idx % 2 === 1 ? "md:order-1" : ""}>
-                <div className="aspect-[4/3] bg-gray-100 rounded-2xl flex items-center justify-center border border-gray-200">
-                  <div className="text-center">
-                    <div className="w-20 h-20 mx-auto mb-4 rounded-xl bg-primary/10 flex items-center justify-center">
-                      <svg
-                        className="w-10 h-10 text-primary"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"
-                        />
-                      </svg>
-                    </div>
-                    <p className="text-sm text-gray-400">{product.name} Screenshot</p>
-                  </div>
+                <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+                  <Image
+                    src={product.image}
+                    alt={`${product.name} Screenshot`}
+                    width={800}
+                    height={600}
+                    className="w-full h-auto"
+                  />
                 </div>
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-3">
-            어떤 제품이 적합한지 궁금하신가요?
-          </h2>
-          <p className="text-gray-500 mb-6">
-            VxLab 전문가가 귀사의 요구사항에 맞는 최적의 솔루션을 제안해드립니다.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary-dark transition-colors"
-          >
-            상담 문의
-          </Link>
         </div>
       </section>
     </>

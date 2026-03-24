@@ -24,15 +24,16 @@ const products = [
 ];
 
 const industries = [
-  { name: "Aerospace", label: "항공우주" },
-  { name: "Automotive", label: "자동차" },
   { name: "Electronics", label: "전자/반도체" },
+  { name: "Battery", label: "이차전지" },
+  { name: "Automotive", label: "자동차" },
+  { name: "Aerospace", label: "항공우주" },
   { name: "Research", label: "연구개발" },
 ];
 
 const stats = [
   { value: "Sub-micron", label: "해상도 지원" },
-  { value: "10x", label: "빠른 재구성 속도" },
+  { value: "5x", label: "빠른 재구성 속도" },
   { value: "GPU", label: "가속 알고리즘" },
   { value: "24/7", label: "기술 지원" },
 ];
@@ -216,7 +217,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {industries.map((industry) => (
               <Link
                 key={industry.name}
