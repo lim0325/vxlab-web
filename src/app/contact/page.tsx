@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact | VxLab",
@@ -32,102 +33,7 @@ export default function ContactPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 메시지 보내기
               </h2>
-              <form className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
-                      이름 *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors"
-                      placeholder="홍길동"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="company"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
-                      회사명
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors"
-                      placeholder="회사명"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    이메일 *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors"
-                    placeholder="email@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="subject"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    문의 유형
-                  </label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors bg-white"
-                  >
-                    <option value="demo">데모 요청</option>
-                    <option value="technical">기술 상담</option>
-                    <option value="pricing">가격 문의</option>
-                    <option value="partnership">파트너십</option>
-                    <option value="other">기타</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    메시지 *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors resize-vertical"
-                    placeholder="문의 내용을 작성해주세요."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full sm:w-auto px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-colors"
-                >
-                  보내기
-                </button>
-              </form>
+              <ContactForm />
             </div>
 
             {/* Contact Info */}
