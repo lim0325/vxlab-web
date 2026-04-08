@@ -3,32 +3,32 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About | VxLab",
-  description: "VxLab은 X-ray CT 재구성 소프트웨어를 개발하는 기업입니다.",
+  description: "VxLab은 산업용 X-ray 운영, 검사, CT 재구성 소프트웨어를 개발·공급하는 기술 기업입니다.",
 };
 
 const values = [
   {
     title: "기술 혁신",
     description:
-      "최신 CT 재구성 알고리즘과 GPU 가속 기술을 끊임없이 연구하고 개발합니다.",
+      "X-ray 운영 자동화, 검사 알고리즘, CT 재구성 엔진까지 전 영역에서 기술 혁신을 추구합니다.",
   },
   {
     title: "고객 중심",
     description:
-      "고객의 검사 환경과 품질 요구사항을 정확히 이해하고, 최적의 솔루션을 제공합니다.",
+      "고객의 검사 환경과 운영 요구사항을 정확히 이해하고, 현장에 최적화된 솔루션을 제공합니다.",
   },
   {
     title: "신뢰와 정밀",
     description:
-      "검증된 알고리즘과 엄격한 품질 기준을 통해 신뢰할 수 있는 분석 결과를 보장합니다.",
+      "검증된 알고리즘과 엄격한 품질 기준을 통해 운영부터 분석까지 신뢰할 수 있는 결과를 보장합니다.",
   },
 ];
 
 const milestones = [
-  { year: "설립", desc: "VxLab 창립, CT 재구성 엔진 개발 시작" },
-  { year: "R&D", desc: "GPU 가속 재구성 알고리즘 개발 완료" },
-  { year: "제품 출시", desc: "VxCT Studio / VxCT Engine 정식 출시" },
-  { year: "성장", desc: "글로벌 파트너십 확대 및 인라인 솔루션 출시" },
+  { year: "설립", desc: "VxLab 창립, X-ray CT 소프트웨어 개발 시작" },
+  { year: "R&D", desc: "GPU 가속 CT 재구성 알고리즘 및 X-ray 운영 소프트웨어 개발 완료" },
+  { year: "제품 출시", desc: "VxWorkspace / VxReconSDK 정식 출시" },
+  { year: "성장", desc: "글로벌 파트너십 확대 및 인라인 검사 솔루션 출시" },
 ];
 
 export default function AboutPage() {
@@ -58,16 +58,17 @@ export default function AboutPage() {
                 Our Mission
               </p>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                비파괴 검사의 미래를 만들어갑니다
+                산업용 X-ray의 모든 과정을 소프트웨어로
               </h2>
               <p className="text-gray-500 leading-relaxed mb-4">
-                VxLab은 X-ray CT 기술의 핵심인 재구성(Reconstruction) 소프트웨어를
-                개발하고 있습니다. 제조 현장에서 품질을 보장하고, 연구 현장에서
-                새로운 발견을 가능하게 하는 것이 우리의 목표입니다.
+                VxLab은 X-ray 장비 운영, 비파괴 검사, CT 재구성까지
+                산업용 X-ray의 전 과정을 아우르는 소프트웨어를 개발·공급합니다.
+                제조 현장의 품질을 보장하고, 연구 현장에서 새로운 발견을
+                가능하게 하는 것이 우리의 목표입니다.
               </p>
               <p className="text-gray-500 leading-relaxed">
-                CT 영상 처리, GPU 가속 컴퓨팅, 인공지능 분야의 전문가들이 모여
-                산업 현장의 실질적인 문제를 해결하는 소프트웨어를 만들고 있습니다.
+                X-ray 시스템 제어, CT 영상 처리, GPU 가속 컴퓨팅, 인공지능 분야의
+                전문가들이 모여 산업 현장의 실질적인 문제를 해결합니다.
               </p>
             </div>
             <div className="bg-gray-50 rounded-2xl p-10 border border-gray-100">
