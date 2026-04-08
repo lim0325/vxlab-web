@@ -1,30 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 
 export default function ContactForm() {
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [state, handleSubmit] = useForm("xvzvywgp");
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus("sending");
-    const form = e.currentTarget;
-    const data = new FormData(form);
-    try {
-      const res = await fetch("https://formspree.io/f/xvzvywgp", {
-        method: "POST",
-        body: data,
-        headers: { Accept: "application/json" },
-      });
-      if (res.ok) {
-        setStatus("success");
-        form.reset();
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
-    }
+  if (state.succeeded) {
+    return (
+      <p className="text-green-600 font-medium py-4">
+        메시지가 전송되었습니다. 빠른 시일 내에 답변 드리겠습니다. 감사합니다!
+      </p>
+    );
   }
 
   return (
@@ -69,6 +55,7 @@ export default function ContactForm() {
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors"
           placeholder="email@example.com"
         />
+        <ValidationError field="email" prefix="이메일" errors={state.errors} className="text-red-500 text-sm mt-1" />
       </div>
 
       <div>
@@ -100,23 +87,16 @@ export default function ContactForm() {
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors resize-vertical"
           placeholder="문의 내용을 작성해주세요."
         />
+        <ValidationError field="message" prefix="메시지" errors={state.errors} className="text-red-500 text-sm mt-1" />
       </div>
 
-      <div className="flex items-center gap-4">
-        <button
-          type="submit"
-          disabled={status === "sending"}
-          className="px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-colors disabled:opacity-50"
-        >
-          {status === "sending" ? "전송 중..." : "보내기"}
-        </button>
-        {status === "success" && (
-          <p className="text-green-600 text-sm">메시지가 전송되었습니다. 감사합니다!</p>
-        )}
-        {status === "error" && (
-          <p className="text-red-500 text-sm">전송에 실패했습니다. 다시 시도해주세요.</p>
-        )}
-      </div>
+      <button
+        type="submit"
+        disabled={state.submitting}
+        className="px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-colors disabled:opacity-50"
+      >
+        {state.submitting ? "전송 중..." : "보내기"}
+      </button>
     </form>
   );
 }
