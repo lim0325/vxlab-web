@@ -49,7 +49,7 @@ export default function Home() {
             <p className="text-accent font-medium text-sm uppercase tracking-widest mb-4">
               X-ray CT Reconstruction Software
             </p>
-            <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6 whitespace-nowrap">
               See What Others <span className="text-accent">Can&apos;t See</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 max-w-2xl">
