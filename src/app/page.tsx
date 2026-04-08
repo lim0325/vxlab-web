@@ -54,7 +54,7 @@ export default function Home() {
               See What Others <span className="text-accent">Can&apos;t See</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 max-w-2xl">
-              VxLab은 산업용 X-ray CT 재구성 소프트웨어를 개발합니다.<br />
+              VxLab은 산업용 X-ray 검사 관련 소프트웨어를 개발하는 기술 기업입니다.<br />
               비파괴 검사부터 품질 관리까지, 보이지 않는 것을 선명하게 보여드립니다.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
