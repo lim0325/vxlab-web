@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ReconSlideshow from "./components/ReconSlideshow";
 
 const products = [
   {
@@ -173,20 +174,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* CT Scan visual */}
-            <div className="relative">
-              <div className="aspect-square bg-gray-900 rounded-2xl overflow-hidden flex items-center justify-center">
-                <div className="w-3/4 h-3/4 relative">
-                  <div className="absolute inset-0 rounded-full border-4 border-accent/30" />
-                  <div className="absolute inset-[15%] rounded-full border-2 border-primary/40" />
-                  <div className="absolute inset-[30%] rounded-full bg-primary/20" />
-                  <div className="absolute inset-[40%] rounded-full bg-accent/20" />
-                  <div className="absolute inset-[50%] rounded-full bg-white/10" />
-                  <div className="absolute top-0 left-1/2 w-px h-full bg-accent/50 animate-pulse" />
-                  <div className="absolute top-1/2 left-0 w-full h-px bg-accent/50 animate-pulse" />
-                </div>
-              </div>
-            </div>
+            <ReconSlideshow />
           </div>
         </div>
       </section>
