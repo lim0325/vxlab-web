@@ -140,7 +140,7 @@ export default function ContactPage() {
                   <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-2">
                     Email
                   </h3>
-                  <p className="text-gray-500">yslim@vxlab.co.kr</p>
+                  <p className="text-gray-500">sales@vxlab.co.kr</p>
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-2">
