@@ -44,7 +44,7 @@ export default function AboutPage() {
             보이지 않는 것을 보는 기술
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl">
-            VxLab은 산업용 X-ray CT 재구성 소프트웨어를 개발하는 기술 기업입니다.
+            VxLab은 산업용 X-ray 관련 소프트웨어를 개발하는 기술 기업입니다.
           </p>
         </div>
       </section>
