@@ -44,7 +44,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="gradient-bg relative overflow-hidden">
         <div className="absolute inset-0 ct-grid opacity-30" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 md:pt-40 md:pb-28">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-14 md:pt-28 md:pb-20">
           <div className="max-w-3xl">
             <p className="text-accent font-medium text-sm uppercase tracking-widest mb-4">
               X-ray CT Reconstruction Software
