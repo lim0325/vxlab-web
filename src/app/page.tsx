@@ -73,19 +73,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Abstract CT visualization */}
-          <div className="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2">
-            <div className="w-80 h-80 relative">
-              <div className="absolute inset-0 rounded-full border-2 border-accent/20 animate-spin" style={{ animationDuration: "20s" }} />
-              <div className="absolute inset-8 rounded-full border border-accent/30 animate-spin" style={{ animationDuration: "15s", animationDirection: "reverse" }} />
-              <div className="absolute inset-16 rounded-full border border-accent/40 animate-spin" style={{ animationDuration: "10s" }} />
-              <div className="absolute inset-24 rounded-full bg-accent/10 backdrop-blur-sm flex items-center justify-center">
-                <svg className="w-16 h-16 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                </svg>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
