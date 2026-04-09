@@ -56,16 +56,6 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-2">
-                    Address
-                  </h3>
-                  <p className="text-gray-500">
-                    경기도 광명시 서부샛길 778 (철산동)
-                    <br />
-                    디오스텔가산 1405호
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-2">
                     Business Hours
                   </h3>
                   <p className="text-gray-500">
