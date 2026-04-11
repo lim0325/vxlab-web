@@ -58,7 +58,7 @@ export default function AboutPage() {
                 Our Mission
               </p>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                산업용 X-ray의 모든 과정을 소프트웨어로
+                X-ray 운영부터 CT 재구성까지, 하나의 솔루션으로
               </h2>
               <p className="text-gray-500 leading-relaxed mb-4">
                 VxLab은 X-ray 장비 운영, 비파괴 검사, CT 재구성까지
